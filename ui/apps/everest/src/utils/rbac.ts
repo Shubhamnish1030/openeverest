@@ -52,6 +52,7 @@ export type RBACResource =
   | 'backup-classes'
   | 'instances'
   | 'backup-storages'
+  | 'backup-storage-classes'
   | 'monitoring-configs'
   | 'monitoring-classes'
   | 'monitoring-destinations'
@@ -93,6 +94,7 @@ const RBAC_OBJECT_FORMATS: { [R in RBACResource]: RBACObjectFormat<R> } = {
   'backup-imports': 'cluster-namespaced',
   restores: 'cluster-namespaced',
   'backup-storages': 'cluster-namespaced',
+  'backup-storage-classes': 'cluster-scoped',
   'monitoring-configs': 'cluster-namespaced',
   'monitoring-destinations': 'cluster-namespaced',
   'config-maps': 'cluster-namespaced',
