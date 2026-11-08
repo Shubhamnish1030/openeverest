@@ -3747,7 +3747,9 @@ export interface components {
                             container?: string;
                             /**
                              * @description Kind is the kind of the component's type
-                             *     (Provider.spec.componentTypes.<type>.kind).
+                             *     (Provider.spec.componentTypes.<type>.kind), set by provider-runtime.
+                             *     A provider may leave it empty; an endpoint it computes with another
+                             *     kind is not published.
                              */
                             kind: string;
                             /** @description PodSelector selects the pods serving the endpoint. */
@@ -3830,7 +3832,9 @@ export interface components {
                             component: string;
                             /**
                              * @description Kind is the kind of the component's type
-                             *     (Provider.spec.componentTypes.<type>.kind).
+                             *     (Provider.spec.componentTypes.<type>.kind), set by provider-runtime.
+                             *     A provider may leave it empty; an endpoint it computes with another
+                             *     kind is not published.
                              */
                             kind: string;
                             /** @description Params are extra scrape query parameters (e.g. target for /probe). */
