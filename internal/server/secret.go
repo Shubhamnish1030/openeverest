@@ -26,7 +26,7 @@ import (
 )
 
 // CreateSecret creates a new secret in the specified namespace and cluster.
-func (e *EverestServer) CreateSecret(c echo.Context, cluster, namespace string) error {
+func (e *EverestServer) CreateSecret(c echo.Context, cluster, namespace string, _ api.CreateSecretParams) error {
 	secret := &corev1.Secret{}
 	if err := c.Bind(secret); err != nil {
 		e.l.Errorf("CreateSecret: failed to bind request body: %v", err)

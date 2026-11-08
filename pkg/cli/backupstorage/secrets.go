@@ -111,7 +111,7 @@ func createSecret(
 		Type:       new("Opaque"),
 		StringData: &data,
 	}
-	resp, err := c.CreateSecretWithResponse(ctx, cluster, namespace, secret)
+	resp, err := c.CreateSecretWithResponse(ctx, cluster, namespace, nil, secret)
 	if err != nil {
 		return fmt.Errorf("create secret request failed: %w", err)
 	}
